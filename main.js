@@ -10,7 +10,6 @@ $(document).ready(function(){
 		}
 		if (dados.cod == 404){
 			alert('cheque o nome e a acentuação da cidade');
-			$('#cidade').val('');
 			$('#tempo').empty();
 			$('#temp').empty();
 			$('#umidade').empty();
