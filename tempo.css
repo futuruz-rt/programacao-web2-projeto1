@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+body{
+    background-color: Lavender;
+    text-align: center;
+}
+
+h1{
+    margin-top:70px;
+    font-size: 55px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.conteudo{
+	margin-left: 10px;
+}
+
+.bold{
+  font-weight: bold;
+  font-size: 1em;
+	text-transform: capitalize;
+}
+
+.button {
+  margin: 30px;
+  text-align: center;
+}
+
+.consulta{
+  font-size: 100%;
+	padding: 0.75em;
+	text-align: center;	
+}
+
+.consulta:hover {
+  cursor: pointer;
+}
+
+.limpar{
+  font-size: 100%;
+	padding: 0.75em;
+	text-align: center;
+	text-decoration: none;
+}
+
+.limpar:hover {
+  cursor: pointer;
+}
