@@ -6,12 +6,13 @@
     <title>Consulta Tempo</title>
 </head>
 
+
 <body>
     <div class="conteudo">
         <h1>Aplicativo - Consulta Tempo</h1>
 
         <div class="cidade">
-	<input type="text" id="cidade" name="cidade" value="" placeholder="Exemplo: Londrina"/>
+	    <input type="text" id="cidade" name="cidade" value="" placeholder="Exemplo: Londrina"/>
         </div>
 
         <div class="button">
@@ -22,12 +23,14 @@
 
         <div class="mostraTempo">
             <h2>Clima atual é:</h2>
-            <div>icone da api</div>
+            <div><span id="tempo" class="bold"></span></div>
+            <div><span id="tempoMarca" class="bold"> </span></div>
+            <p id="icon"></p>
         </div>
 
-        <div>Temperatura:℃</div>
-        <div>Umidade: ％</div>
-
+        <div>Temperatura:<span id="temp"></span> ℃</div>
+        <div>Umidade: <span id="umidade"></span> ％</div>
+	    
     </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
