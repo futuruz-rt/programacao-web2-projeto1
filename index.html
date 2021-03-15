@@ -1,19 +1,24 @@
+
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="tempo.css">	
+	<link rel="stylesheet" href="tempo.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">	
     <title>Consulta Tempo</title>
 </head>
+
 
 <body>
     <div class="conteudo">
         <h1>Aplicativo - Consulta Tempo</h1>
 
         <div class="cidade">
-	    <input type="text" id="cidade" name="cidade" value="" placeholder="Exemplo: Londrina"/>
+			<input type="text" id="cidade" name="cidade" value="" placeholder="Exemplo: Londrina"/>
         </div>
-
+		
+		<div class="validacao" id="validacao"></div>   
+		
         <div class="button">
             <button id="consulta"><div class="consulta">Consultar</div></button>
             <button id="limpar"><div class="limpar">Limpar</div></button>
