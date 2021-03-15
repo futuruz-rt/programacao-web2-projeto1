@@ -4,19 +4,21 @@ $(document).ready(function(){
         const apiKey = '0a5ea4492af408582dd019a84a1e5085';
         const respostaReq = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cidade + "&units=metric&lang=pt&appid=" + apiKey);
         const dados = await respostaReq.json();
-		if (cidade == '' || cidade.length <= 3){
-			alert('cidade vazia ou menor que 4 caracteres');
-			return;
-		}
-		if (dados.cod == 404){
-			alert('cheque o nome e a acentuação da cidade');
-			$('#tempo').empty();
-			$('#temp').empty();
-			$('#umidade').empty();
-			$('#tempoMarca').empty();
-			return;
+	if (cidade == '' || cidade.length <= 3){
+		msg = document.getElementById("validacao");
+		msg.innerHTML = "A cidade deve ser maior que 3 caracteres";
+        	return;
+	}
+	if (dados.cod == 404){
+	  msg = document.getElementById("validacao");
+	  msg.innerHTML = "Cheque a acentuação e o nome da cidade";
+     	  $('#tempo').empty();
+	  $('#temp').empty();
+ 	  $('#umidade').empty();
+	  $('#tempoMarca').empty();
+          return;
         }
-		switch(dados.weather[0].icon){
+	switch(dados.weather[0].icon){
             case '01d':
                 $("#tempoMarca").html("<img src='http://openweathermap.org/img/wn/01d@2x.png'>");
                 break;
@@ -93,15 +95,17 @@ $(document).ready(function(){
         }
         $("#tempo").html(dados.weather[0].description);
         $("#temp").html(dados.main.temp);
-		$("#umidade").html(dados.main.humidity); 
+	$("#umidade").html(dados.main.humidity); 
+	$('#validacao').empty();
     })
 
     $("#limpar").on('click' ,function(){
         $('#cidade').val('');
-		$('#tempo').empty();
+	$('#tempo').empty();
         $('#temp').empty();
         $('#umidade').empty();
         $('#tempoMarca').empty();
+	$('#validacao').empty();
     })       
        
 })
